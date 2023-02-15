@@ -5,10 +5,9 @@ main();
 
 async function main() {
     const env = process.env;
-    const type = env.INPUT_type;
-    const message = env.INPUT_message;
-    const webhook = env.INPUT_webhook;
-    console.log(type);
+    const type = env.INPUT_TYPE;
+    const message = env.INPUT_MESSAGE;
+    const webhook = env.INPUT_WEBHOOK;
 
     console.log(type, message, webhook);
     if (type === undefined || message === undefined || webhook === undefined) {
