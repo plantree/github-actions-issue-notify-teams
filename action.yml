@@ -1,0 +1,22 @@
+name: "Send notifications to Teams"
+description: "This action will sned notifications to Teams"
+author: "plantree"
+
+branding:
+  icon: "book-open"
+  color: "green"
+
+inputs:
+  type:
+    description: "type of message, such as: new-issue, daily-report"
+    required: true
+  message: 
+    description: "Message to to sent"
+    required: true
+  webhook:
+    description: "Webhook of Teams Channel"
+    required: true 
+
+runs:
+  using: "node16"
+  main: "index.js"
