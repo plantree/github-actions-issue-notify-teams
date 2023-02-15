@@ -13,5 +13,5 @@ jobs:
       - uses: plantree/github-actions-issue-notify-teams@main
         with:
           type: new-issue
-          message: {"title":"A new important issue is created","issueName":"Is CoreWebView2Frame still in development?","issueNumber":"3216","issueLink":"https://github.com/MicrosoftEdge/WebView2Feedback/issues/3216"}
+          message: '{"title":"A new important issue is created","issueName":"Is CoreWebView2Frame still in development?","issueNumber":"3216","issueLink":"https://github.com/MicrosoftEdge/WebView2Feedback/issues/3216"}'
           webhook: ${{ secrets.WEBHOOK }}
