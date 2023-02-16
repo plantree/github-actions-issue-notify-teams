@@ -1,4 +1,4 @@
-name: Test sending notifications
+name: Test sending notifications about new-issue
 
 on:
   push:

@@ -1,0 +1,17 @@
+name: Test sending notifications about daily-report
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    name: Testing workflow
+    steps:
+      - uses: plantree/github-actions-issue-notify-teams@main
+        with:
+          type: daily-report
+          message: '{"total":2,"issueList":[{"issueName":"Is CoreWebView2Frame still in development?","issueLink":"https: //github.com/MicrosoftEdge/WebView2Feedback/issues/3216","issueTags":["question"],"issueAssignee":null},{"issueName":"What compatibility guarantees does WebView2Loader.dll give?","issueLink":"https://github.com/MicrosoftEdge/WebView2Feedback/issues/3215","issueTags":["question"],"issueAssignee":null}]}'
+          webhook: ${{ secrets.WEBHOOK }}
