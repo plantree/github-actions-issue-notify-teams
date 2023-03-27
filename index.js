@@ -64,7 +64,7 @@ async function main() {
             core.setFailed();
             return -1;
         }
-    } else if (type === 'daily-report') {
+    } else if (type === 'daily-report' || type === 'weekly-report') {
         let issueMeta = {};
         try {
             issueMeta = JSON.parse(message);
@@ -90,11 +90,12 @@ async function main() {
             let tag = tags.join(', ');
             issueListMessage += `| ${issue['issueName']} | ${issue['issueLink']} | ${tag} | ${issue['issueAssignee']} |\n`;
         }
+        const summary = type === 'daily-report' ? 'Daily report about issues' : 'Weekly report about issues';
         const data = {
             "@type": "MessageCard",
             "@context": "http://schema.org/extensions",
             "themeColor": "0076D7",
-            "summary": "Daily report about issues",
+            "summary": summary,
             "sections": [{
                 "activityTitle": "Daily report about issues",
                 "facts": [{
