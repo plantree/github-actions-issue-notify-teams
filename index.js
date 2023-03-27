@@ -97,7 +97,7 @@ async function main() {
             "themeColor": "0076D7",
             "summary": summary,
             "sections": [{
-                "activityTitle": "Daily report about issues",
+                "activityTitle": summary,
                 "facts": [{
                     "name": "Total issues",
                     "value": total
